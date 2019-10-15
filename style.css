@@ -1,0 +1,14 @@
+.type {
+    display: inline-block;
+    padding: 3px;
+    margin: 10px;
+}
+
+.input {
+    display: block;
+}
+
+.wrapper {
+    padding:5px;
+    border: 1px solid black;
+}

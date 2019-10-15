@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type ="text/css" href="style.css">
+<script>
+    // user to create his own form
+
+    function display() {
+        document.getElementById("b").style.display="block"
+        // add dropdown field
+
+        // set attribute to radio
+        // set attribute to text
+        var node = document.createElement("SELECT")
+        node.setAttribute("id", "mySelect")
+        document.body.appendChild(node)
+
+        var x = document.createElement("option");
+        x.setAttribute("value", "x");
+        var b = document.createTextNode("X");
+        x.appendChild(b);
+        document.getElementById("mySelect").appendChild(x);
+
+        var y = document.createElement("option");
+        y.setAttribute("value", "y");
+        var c = document.createTextNode("Y");
+        y.appendChild(c);
+        document.getElementById("mySelect").appendChild(y);
+
+        var z = document.createElement("option")
+        z.setAttribute("value", "z")
+        var a = document.createTextNode("Z");
+        z.appendChild(a);
+        document.getElementById("mySelect").appendChild(z)
+
+        
+    }
+
+    // form = document.getElementById("myForm")
+    // form.onsubmit = function(e){
+    //     e.preventDefault();
+
+    //     // let element_1 = document.getElementById("element_1")
+    //     // let element_2 = document.getElementById("element_2")
+    //     // element_1.placeholder = form.dropdown.value
+
+    //     // element_2.placeholder = form.ele.value
+    // }
+
+
+
+</script>
+</head>
+    <body>
+        <div class="wrapper">
+            <h1>Area A</h1>
+            <form id="myForm">
+                <div class="type">
+                    <label>Type of element</label>
+                    <select name= "dropdown" class="input" >
+                        <option value="default">Select Element</option>
+                        <option value="Test">Text</option>
+                        <option value="select">Dropdwon</option>
+                        <option value="radio">Radio</option>
+                    </select>
+                </div>
+                <div class="type">
+                    <label for="element">Element's Label</label>
+                    <input name ="ele" class= "input" type="text" placeholder="Enter Label Name">
+                </div>
+                <button type="submit" onclick="display()">Add</button>
+            </form>
+        </div>
+        <!-- result -->
+        <div class="wrapper" id="b" style="display:none">
+            <!-- <h1>Area B</h1>
+            <p class="type">
+                <label for="element">Element 1</label>
+                <input class= "input" type="text" id="element_1">
+            </p>
+            <div class="type">
+                <label for="type">Element 2 Label</label>
+                <div>
+                    <select id="element_2" class="input">
+                        <option value="Select Element">Select Element</option>
+                    </select>
+                </div>
+            </div> -->
+            <p id="result"></p>
+            </div>
+    </body>
+</html>
+<!-- ------------------------------------------------------- -->

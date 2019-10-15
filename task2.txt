@@ -1,0 +1,11 @@
+Make a small form generator 
+
+- One dropdown / select button with two values "text" and "dropdown"
+- One label field where we give label 
+- One add button 
+- In Area B, we need to show the added fields.
+- Select dropdown will have default values of "A", "B", "C"
+- Use any framework you are comfortable with. Preferred : Pure Javascript, AngularJS, Angular 2 or React
+- Please upload the project to your github
+
+Please reach out to me if you have any questions
