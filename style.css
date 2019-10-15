@@ -8,7 +8,17 @@
     display: block;
 }
 
+.label {
+    display: flex;
+    padding-right: 50px;
+}
+
 .wrapper {
     padding:5px;
     border: 1px solid black;
 }
+
+.space {
+    margin-right: 10px;
+}
+
