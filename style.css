@@ -10,12 +10,13 @@
 
 .label {
     display: flex;
-    padding-right: 50px;
+    text-align: center;
 }
 
 .wrapper {
     padding:5px;
     border: 1px solid black;
+    margin:5px;
 }
 
 .space {

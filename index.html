@@ -7,7 +7,14 @@
     function display() {
         document.getElementById("b").style.display="block"
     }
+
+    function addEverything() {
+        addDiv();
+        add(document.forms[0].ele.value);
+        addLabel();
+    }
     
+
     function add(type) {
         if(document.getElementById("ele").value == ""){
             alert("Please select a selection");
@@ -15,7 +22,7 @@
         }
         if(type == "mySelect"){
             // add dropdown menu
-        var dropdown = document.getElementById("result");
+        var dropdown = document.getElementById("wrapDiv");
             var array = ["Select Element","X","Y","Z"];
             var selectedList = document.createElement("select");
             selectedList.setAttribute("id", type);
@@ -31,9 +38,16 @@
             ele.setAttribute("type", type);
             ele.setAttribute("value", type);
             ele.setAttribute("name", type);
-            var result = document.getElementById("result");
+            var result = document.getElementById("wrapDiv");
             result.appendChild(ele)
         }   
+    }
+
+    function addDiv(){
+        var wrapDiv = document.createElement("div")
+        var outsideDiv = document.getElementById("container");
+        outsideDiv.appendChild(wrapDiv)
+        wrapDiv.id = "wrapDiv"
     }
 
     // addLabel
@@ -43,9 +57,10 @@
         var input = document.getElementById("nameForm").value;
         var t = document.createTextNode(input)
         a.appendChild(t)
-        document.getElementById("demo").appendChild(a)
+        document.getElementById("wrapDiv").appendChild(a)
         
     }
+
 </script>
 </head>
     <body>
@@ -65,15 +80,15 @@
                     <label for="element">Element's Label</label>
                     <input id="nameForm" class= "input" type="text" placeholder="Enter Label Name">
                 </div>
-                <input type="button" value="add" onclick="display(); add(document.forms[0].ele.value); addLabel();"/>
+                <input type="button" value="add" onclick="display();  addEverything()"/>
             </form>
         </div>
         <!-- result -->
         <div class="wrapper" id="b" style="display:none">
             <h1>Area B</h1>
-                <div>
+                <div id="container">
                     <label class="label" id="demo"></label>
-                    <span id="result">&nbsp;</span>
+                    <span class="label" id="result">&nbsp;</span>
                 </div>
             </div>
     </body>
